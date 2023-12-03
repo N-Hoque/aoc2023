@@ -70,8 +70,6 @@ impl Solver {
                     }
                 }
 
-                println!("{l} {digits:?}");
-
                 digits[0] * 10 + digits[digits.len() - 1]
             })
             .sum()
