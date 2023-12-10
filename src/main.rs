@@ -1,13 +1,16 @@
 use aoc_2023::read_file;
 
-fn main() {
-    let data = read_file(1);
-    let solver = aoc_2023::day_1::Solver::new(data);
-    println!("Day 1 [1/2]: {}", solver.solve_first());
-    println!("Day 1 [2/2]: {}", solver.solve_second());
+macro_rules! solve_day {
+    ($day:expr,$day_mod:ident) => {
+        let data = read_file($day);
+        let solver = aoc_2023::$day_mod::Solver::new(data);
+        println!("Day {} [1/2]: {}", $day, solver.solve_first());
+        println!("Day {} [2/2]: {}", $day, solver.solve_second());
+    };
+}
 
-    let data = read_file(2);
-    let solver = aoc_2023::day_2::Solver::new(data);
-    println!("Day 2 [1/2]: {}", solver.solve_first());
-    println!("Day 2 [2/2]: {}", solver.solve_second());
+fn main() {
+    solve_day!(1, day_1);
+    solve_day!(2, day_2);
+    solve_day!(3, day_3);
 }
