@@ -14,4 +14,5 @@ fn main() {
     solve_day!(2, day_2);
     solve_day!(3, day_3);
     solve_day!(4, day_4);
+    solve_day!(5, day_5);
 }
