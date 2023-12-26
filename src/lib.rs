@@ -10,6 +10,7 @@ pub mod day_4;
 pub mod day_5;
 pub mod day_6;
 pub mod day_7;
+pub mod day_8;
 
 pub fn read_file(day: u8) -> Vec<String> {
     let data = std::fs::File::open(format!("res/day_{day}.txt")).unwrap();
